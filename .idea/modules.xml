@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ExcelUtil.iml" filepath="$PROJECT_DIR$/ExcelUtil.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/excellib/excellib.iml" filepath="$PROJECT_DIR$/excellib/excellib.iml" />
     </modules>
   </component>
 </project>
