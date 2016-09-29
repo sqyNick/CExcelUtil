@@ -1,4 +1,4 @@
-package main;
+package com.sqy.cn.excellib;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
