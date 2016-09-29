@@ -21,11 +21,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtil {
-	//默认单元格内容为数字时格式
 	private static DecimalFormat df = new DecimalFormat("0");
-	// 默认单元格格式化日期字符串
 	private static SimpleDateFormat sdf = new SimpleDateFormat(  "yyyy-MM-dd HH:mm:ss"); 
-	// 格式化数字
 	private static DecimalFormat nf = new DecimalFormat("0.0");  
 	public static ArrayList<ArrayList<ArrayList<Object>>> readExcel(File file){
 		if(file == null){
@@ -40,8 +37,8 @@ public class ExcelUtil {
 		}
 	}
 	/*
-	 *@return 将返回结果存储在ArrayList内，存储结构与二位数组类似
-	 * lists.get(0).get(0).get(0)表示过去Excel中第一张表0行0列单元格
+	 *@return 
+	 * lists.get(0).get(0).get(0)
 	 */
 	public static ArrayList<ArrayList<ArrayList<Object>>> readExcel2003(File file){
 		try{
@@ -58,8 +55,7 @@ public class ExcelUtil {
 					row = sheet.getRow(i);
 					colList = new ArrayList<Object>();
 					if(row == null){
-						//当读取行为空时
-						if(i != sheet.getPhysicalNumberOfRows()){//判断是否是最后一行
+						if(i != sheet.getPhysicalNumberOfRows()){
 							rowList.add(colList);
 						}
 						continue;
@@ -69,8 +65,7 @@ public class ExcelUtil {
 					for( int j = 0 ; j <= row.getLastCellNum() ;j++){
 						cell = row.getCell(j);
 						if(cell == null ){
-							//当该单元格为空
-							if(j != row.getLastCellNum()){//判断是否是该行中最后一个单元格
+							if(j != row.getLastCellNum()){
 								colList.add("");
 							}
 							continue;
@@ -178,7 +173,7 @@ public class ExcelUtil {
 		}
 	}
 	/*
-	 * 根据获取的result值，创建基本的Excel
+	 * 
 	 */
 	public static void writeExcel(ArrayList<ArrayList<ArrayList<Object>>> result,String path){
 		if(result == null){
@@ -205,7 +200,7 @@ public class ExcelUtil {
             e.printStackTrace();
         }
         byte[] content = os.toByteArray();
-        File file = new File(path);//Excel文件生成后存储的位置。
+        File file = new File(path);
         OutputStream fos  = null;
         try
         {
