@@ -6,7 +6,7 @@ android {
     packagingOptions {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE'
-        exclude 'META-INF/RELEASE_NOTES'
+        exclude 'META-INF/RELEASE_NOTES.txt'
     }
 
     defaultConfig {
