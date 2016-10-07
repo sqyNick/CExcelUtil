@@ -18,6 +18,10 @@ Step 2:
 ```
 ##Then you can use the ExcelUtil just like below.
 ```java
+      Read Excel:
         ArrayList<ArrayList<ArrayList<Object>>> excel = ExcelUtil.readExcel(new File("your excel path"));
         Object cell = excel.get(0).get(0).get(0);//Get zeroth Sheet zeroth rows and 0 columns
+        -------------------------------------------------------------------------------------------------
+      Write Excel:
+        ExcelUtil.writeExcel(excel,"the path you want to save");
 ```
